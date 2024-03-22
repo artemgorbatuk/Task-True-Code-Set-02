@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Core.Domain;
-public class Tag
+namespace Datasource.Domain;
+public class User
 {
-    public Guid TagId { get; set; }
+    public Guid UserId { get; set; }
 
     [Required]
-    public string Value { get; set; } = default!;
+    public string Name { get; set; } = default!;
 
     [Required]
     public string Domain { get; set; } = default!;

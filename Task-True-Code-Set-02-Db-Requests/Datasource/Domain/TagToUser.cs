@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Core.Domain;
+namespace Datasource.Domain;
 public class TagToUser
 {
     [Key]
