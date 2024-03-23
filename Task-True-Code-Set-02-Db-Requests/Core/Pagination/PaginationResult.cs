@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace Core.Pagination;
 
 [Serializable]
-public class PaginationResult<TDomainModel>
+public class PaginationResult<TEntityModel>
 {
     public int TotalRecords { get; set; }
-    public IEnumerable<TDomainModel> FilteredResult { get; set; }
+    public IEnumerable<TEntityModel> FilteredResult { get; set; }
 }
