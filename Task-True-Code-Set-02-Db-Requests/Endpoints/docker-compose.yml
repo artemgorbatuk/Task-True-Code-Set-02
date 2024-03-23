@@ -1,0 +1,40 @@
+﻿version: '3.8'
+name: true-code
+services:
+ mssql:
+    image: true-code-mssql
+    container_name: mssql-tc
+    restart: always
+    build:
+      context: ..
+      dockerfile: Endpoints/Dockerfile.mssql
+      no_cache: true
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Password01"
+    ports:
+      - "1434:1434"
+    expose:
+      - 1433
+ mssql-migration:
+    image: true-code-migration
+    container_name: migration-tc
+    build:
+      context: ..
+      dockerfile: Endpoints/Dockerfile.migration
+      no_cache: true
+    environment:
+       - ConnectionString=${ConnectionString}
+    depends_on:
+        - mssql
+        - webapi
+ webapi:
+    image: true-code-webapi
+    container_name: webapi-tc
+    restart: always
+    build:
+      context: ..
+      dockerfile: Endpoints/Dockerfile
+      no_cache: true
+    ports:
+      - "8081:54414"
