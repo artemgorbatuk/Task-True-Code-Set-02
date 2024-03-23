@@ -13,7 +13,7 @@ public class DbContextTrueCodeFactoryDesignTime : IDesignTimeDbContextFactory<Db
 {
     public DbContextTrueCode CreateDbContext(string[] args)
     {
-        var pathtoApi = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Api"));
+        var pathtoApi = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Endpoints"));
 
         var configuration = new ConfigurationBuilder()
             .SetBasePath(pathtoApi)
