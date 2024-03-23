@@ -12,9 +12,9 @@ public class DbContextTrueCode : DbContext
 {
     public DbContextTrueCode(DbContextOptions<DbContextTrueCode> options) : base(options) { }
 
-    public DbSet<User> Users { get; set; }
-    public DbSet<Tag> Tags { get; set; }
-    public DbSet<TagToUser> TagToUser { get; set; }
+    public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<Tag> Tags { get; set; }
+    public virtual DbSet<TagToUser> TagToUser { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
