@@ -1,5 +1,5 @@
-﻿using Core.Models;
-using Core.Pagination;
+﻿using Core.DataManipulation.Pagination;
+using Core.Models;
 
 namespace Core.Interfaces;
 public interface IRepositoryUser

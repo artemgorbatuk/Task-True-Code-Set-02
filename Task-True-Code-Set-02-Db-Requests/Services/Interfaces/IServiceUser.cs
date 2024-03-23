@@ -1,5 +1,5 @@
-﻿using Core.Models;
-using Core.Pagination;
+﻿using Core.DataManipulation.Pagination;
+using Core.Models;
 using Services.Functionality;
 using Services.Models;
 using System;

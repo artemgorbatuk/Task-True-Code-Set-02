@@ -4,10 +4,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using Core.Ordering;
-using Core.Pagination;
+using Core.DataManipulation.Pagination;
 
-namespace Core.Ordering;
+namespace Core.DataManipulation.Ordering;
 
 /// <summary>
 /// OrderPreset если используется, то после Select
@@ -22,7 +21,7 @@ public static class OrderingIQueryableExtensions
     public static OrderingProcessor<TEntityModel> OrderPreset<TEntityModel>(this IQueryable<TEntityModel> query, PaginationSet paginationSet)
     {
         bool isDesc = !string.IsNullOrEmpty(paginationSet.CollationType) &&
-                            ((paginationSet.CollationType).Trim().ToLower() == "desc");
+                            paginationSet.CollationType.Trim().ToLower() == "desc";
 
         return new OrderingProcessor<TEntityModel>(query, paginationSet.CollationName, isDesc);
     }

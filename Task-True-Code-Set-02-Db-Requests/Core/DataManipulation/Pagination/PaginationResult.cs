@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Pagination;
+namespace Core.DataManipulation.Pagination;
 
 [Serializable]
 public class PaginationResult<TEntityModel>

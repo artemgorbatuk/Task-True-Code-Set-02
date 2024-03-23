@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Core.Ordering;
+namespace Core.DataManipulation.Ordering;
 public class OrderingProcessor<TEntityModel>
 {
     private readonly string _collationName;

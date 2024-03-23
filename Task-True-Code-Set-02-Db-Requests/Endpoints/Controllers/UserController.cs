@@ -1,4 +1,4 @@
-﻿using Core.Pagination;
+﻿using Core.DataManipulation.Pagination;
 using Microsoft.AspNetCore.Mvc;
 using Services.Functionality;
 using Services.Interfaces;

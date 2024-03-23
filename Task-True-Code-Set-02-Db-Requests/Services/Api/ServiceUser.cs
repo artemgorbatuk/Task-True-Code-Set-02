@@ -1,6 +1,6 @@
-﻿using Core.Interfaces;
+﻿using Core.DataManipulation.Pagination;
+using Core.Interfaces;
 using Core.Models;
-using Core.Pagination;
 using Services.Functionality;
 using Services.Interfaces;
 using Services.Models;

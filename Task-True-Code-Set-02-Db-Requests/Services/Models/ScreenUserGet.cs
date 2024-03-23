@@ -1,5 +1,5 @@
-﻿using Core.Models;
-using Core.Pagination;
+﻿using Core.DataManipulation.Pagination;
+using Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

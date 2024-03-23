@@ -1,7 +1,7 @@
 ﻿using Core.DataManipulation;
+using Core.DataManipulation.Pagination;
 using Core.Interfaces;
 using Core.Models;
-using Core.Pagination;
 using Datasource.Contexts;
 using Datasource.Domain;
 using Microsoft.EntityFrameworkCore;

@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Core.Ordering;
+namespace Core.DataManipulation.Ordering;
 internal class OrderPreset<TEntytyModel, TEntityField> : IOrderPreset<TEntytyModel>
 {
     private readonly Expression<Func<TEntytyModel, TEntityField>> _expression;

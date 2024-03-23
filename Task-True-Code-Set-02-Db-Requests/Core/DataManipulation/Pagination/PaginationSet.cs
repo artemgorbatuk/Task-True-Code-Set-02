@@ -1,4 +1,4 @@
-﻿namespace Core.Pagination;
+﻿namespace Core.DataManipulation.Pagination;
 public class PaginationSet
 {
     public int PageSize { get; set; }
