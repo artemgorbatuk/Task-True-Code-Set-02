@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Core.Pagination;
+namespace Core.Ordering;
 internal class OrderPreset<TEntytyModel, TEntityField> : IOrderPreset<TEntytyModel>
 {
     private readonly Expression<Func<TEntytyModel, TEntityField>> _expression;
@@ -12,14 +12,14 @@ internal class OrderPreset<TEntytyModel, TEntityField> : IOrderPreset<TEntytyMod
         _orderPreset = orderPreset;
     }
 
-    public IOrderedQueryable<TEntytyModel> Apply(IQueryable<TEntytyModel> query, bool isDesc)
+    public IOrderedQueryable<TEntytyModel> ApplyOrderPreset(IQueryable<TEntytyModel> query, bool isDesc)
     {
         if (_orderPreset == null)
         {
             return isDesc ? query.OrderByDescending(_expression) : query.OrderBy(_expression);
         }
 
-        var orderedQuery = _orderPreset.Apply(query, isDesc);
+        var orderedQuery = _orderPreset.ApplyOrderPreset(query, isDesc);
 
         return isDesc ? orderedQuery.ThenByDescending(_expression) : orderedQuery.ThenBy(_expression);
     }
